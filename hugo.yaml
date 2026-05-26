@@ -1,6 +1,6 @@
 baseURL: "https://qinzhanqi.github.io/"
 languageCode: "zh-cn"
-title: "秦展齐的笔记"
+title: "Notes"
 theme: "PaperMod"
 
 params:
