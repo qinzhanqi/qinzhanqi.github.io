@@ -1,11 +1,13 @@
 baseURL: "https://qinzhanqi.github.io/"
-title: "Wang Zhen's Home"
+title: "QZQ"
 theme: "LoveIt"
 
-defaultContentLanguage: "en"
-defaultContentLanguageInSubdir: true
+languageCode: "zh-CN"
+defaultContentLanguage: "zh-cn"
+defaultContentLanguageInSubdir: false
+
 hasCJKLanguage: true
-locale: "en"
+locale: "zh-CN"
 enableRobotsTXT: true
 enableEmoji: true
 enableGitInfo: true
@@ -17,8 +19,6 @@ pagination:
 
 taxonomies:
   category: categories
-  tag: tags
-  series: series
 
 permalinks:
   posts: "/posts/:year/:month/:slug/"
@@ -39,109 +39,21 @@ outputs:
     - RSS
 
 author:
-  name: "Wang Zhen"
+  name: "QZQ"
   email: ""
   link: ""
 
 menu:
   main:
     - identifier: posts
-      name: Posts
+      name: 文章
       url: /posts/
       weight: 1
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 2
+
     - identifier: categories
-      name: Categories
+      name: 分类
       url: /categories/
-      weight: 3
-    - identifier: cv
-      name: CV
-      url: /cv/
-      weight: 4
-    - identifier: publication
-      name: Publication
-      url: /publication/
-      weight: 5
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 6
-    - identifier: github
-      name: "Q"
-      url: "https://github.com/qinzhanqi"
-      weight: 7
-      pre: '<i class="fab fa-github fa-fw"></i>'
-
-languages:
-  en:
-    weight: 1
-    locale: "en"
-    label: "English"
-    title: "Wang Zhen's Home"
-    params:
-      description: "Personal academic notes and research blog."
-      keywords:
-        - Physics
-        - Optics
-        - Photonics
-        - Quantum Optics
-        - Ultrafast Laser
-      home:
-        profile:
-          title: "Wang Zhen's Home"
-          subtitle: "Physics · Optics · Notes"
-
-  zh-cn:
-    weight: 2
-    locale: "zh-CN"
-    label: "简体中文"
-    title: "王臻的主页"
-    menu:
-      main:
-        - identifier: posts
-          name: 文章
-          url: /posts/
-          weight: 1
-        - identifier: tags
-          name: 标签
-          url: /tags/
-          weight: 2
-        - identifier: categories
-          name: 分类
-          url: /categories/
-          weight: 3
-        - identifier: cv
-          name: 简历
-          url: /cv/
-          weight: 4
-        - identifier: publication
-          name: 论文
-          url: /publication/
-          weight: 5
-        - identifier: about
-          name: 关于
-          url: /about/
-          weight: 6
-        - identifier: github
-          name: ""
-          url: "https://github.com/qinzhanqi"
-          weight: 7
-          pre: '<i class="fab fa-github fa-fw"></i>'
-    params:
-      description: "个人学术笔记与研究博客。"
-      keywords:
-        - 物理
-        - 光学
-        - 光子学
-        - 量子光学
-        - 飞秒激光
-      home:
-        profile:
-          title: "王臻的主页"
-          subtitle: "物理 · 光学 · 笔记"
+      weight: 2
 
 params:
   version: "0.3.X"
@@ -149,11 +61,11 @@ params:
   gitRepo: ""
   fingerprint: ""
   dateFormat: "2006-01-02"
+
   images:
     - /images/avatar.png
 
   app:
-    title: "Wang Zhen's Home"
     noFavicon: false
     svgFavicon: ""
     themeColor: "#ffffff"
@@ -164,7 +76,7 @@ params:
     enable: true
     type: "lunr"
     contentLength: 4000
-    placeholder: "Search"
+    placeholder: "搜索"
     maxResultLength: 10
     snippetLength: 30
     highlightTag: "em"
@@ -175,7 +87,7 @@ params:
     mobileMode: "auto"
     title:
       logo: ""
-      name: "Wang Zhen's Home"
+      name: "QZQ"
       pre: ""
       post: ""
       typeit: false
@@ -188,7 +100,7 @@ params:
     author: true
     since: 2026
     icp: ""
-    license: '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    license: ""
 
   section:
     paginate: 20
@@ -205,20 +117,19 @@ params:
     profile:
       enable: true
       gravatarEmail: ""
-      avatarURL: "/images/avatar.png"
-      title: "Wang Zhen's Home"
-      subtitle: "Physics · Optics · Notes"
+      avatarURL: "/images/a.jpg"
+      title: "QZQ"
+      subtitle: "物理 · 光学 · 科研笔记"
       typeit: true
-      social: true
+      social: false
       disclaimer: ""
+
     posts:
       enable: true
       paginate: 10
 
   social:
-    GitHub: "qinzhanqi"
-    Email: ""
-    RSS: true
+    RSS: false
 
   page:
     hiddenFromHomePage: false
@@ -251,48 +162,18 @@ params:
       blockRightDelimiter: ""
       copyTex: true
       mhchem: true
+
       mathjax:
         enable: false
+
       katex:
         enable: true
         autoRender: true
         errorColor: "#cc0000"
         macros: {}
 
-    mapbox:
-      accessToken: ""
-      lightStyle: "mapbox://styles/mapbox/light-v10"
-      darkStyle: "mapbox://styles/mapbox/dark-v10"
-      navigation: true
-      geolocate: true
-      scale: true
-      fullscreen: true
-
     share:
-      enable: true
-      Twitter: true
-      Facebook: true
-      Linkedin: true
-      Whatsapp: true
-      Pinterest: false
-      Tumblr: false
-      HackerNews: false
-      Reddit: false
-      VK: false
-      Buffer: false
-      Xing: false
-      Line: false
-      Instapaper: false
-      Pocket: false
-      Flipboard: false
-      Weibo: true
-      Blogger: false
-      Baidu: false
-      Odnoklassniki: false
-      Evernote: false
-      Skype: false
-      Trello: false
-      Mix: false
+      enable: false
 
     comment:
       enable: false
@@ -304,8 +185,8 @@ params:
     seo:
       images: []
       publisher:
-        name: "Wang Zhen"
-        logoUrl: "/images/avatar.png"
+        name: "QZQ"
+        logoUrl: "/images/a.jpg"
 
   typeit:
     speed: 100
@@ -323,37 +204,45 @@ params:
     sogou: ""
 
   seo:
-    image: "/images/avatar.png"
-    thumbnailUrl: "/images/avatar.png"
+    image: "/images/a.jpg"
+    thumbnailUrl: "/images/a.jpg"
 
   analytics:
-    enable: true
+    enable: false
+
     google:
       id: ""
       anonymizeIP: true
+
     fathom:
       id: ""
       server: ""
+
     baidu:
       id: ""
+
     umami:
       data_website_id: ""
       src: ""
       data_host_url: ""
       data_domains: ""
+
     plausible:
       data_domain: ""
       src: ""
+
     cloudflare:
       token: ""
+
     splitbee:
       enable: false
       no_cookie: true
       do_not_track: true
+
     busuanzi:
-      enable: true
-      siteViews: true
-      pageViews: true
+      enable: false
+      siteViews: false
+      pageViews: false
 
   cookieconsent:
     enable: false
@@ -369,12 +258,14 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
   highlight:
     noClasses: false
     codeFences: true
     guessSyntax: true
     lineNos: true
     lineNumbersInTable: true
+
   tableOfContents:
     startLevel: 2
     endLevel: 6
@@ -387,25 +278,25 @@ sitemap:
 
 privacy:
   disqus:
-    disable: false
+    disable: true
 
   googleAnalytics:
-    disable: false
+    disable: true
     respectDoNotTrack: true
 
   instagram:
-    disable: false
-    simple: false
+    disable: true
+    simple: true
 
   vimeo:
-    disable: false
-    enableDNT: false
-    simple: false
+    disable: true
+    enableDNT: true
+    simple: true
 
   x:
-    disable: false
+    disable: true
     enableDNT: true
-    simple: false
+    simple: true
 
   youTube:
     disable: false

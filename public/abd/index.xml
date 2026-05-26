@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ABDs on Notes</title>
+    <title>ABDs on QZQ</title>
     <link>http://localhost:1313/abd/</link>
-    <description>Recent content in ABDs on Notes</description>
+    <description>Recent content in ABDs on QZQ</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 26 May 2026 12:33:40 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/abd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一篇科研笔记示例</title>
+      <link>http://localhost:1313/abd/first-note/</link>
+      <pubDate>Tue, 26 May 2026 14:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/abd/first-note/</guid>
+      <description>&lt;h2 id=&#34;1-这是一篇示例文章&#34;&gt;1. 这是一篇示例文章&lt;/h2&gt;&#xA;&lt;p&gt;这是我的第一篇 Hugo 博客文章。这个文件用于测试以下功能：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;中文显示是否正常；&lt;/li&gt;&#xA;&lt;li&gt;文章目录是否正常；&lt;/li&gt;&#xA;&lt;li&gt;数学公式是否正常；&lt;/li&gt;&#xA;&lt;li&gt;图片是否正常；&lt;/li&gt;&#xA;&lt;li&gt;代码块是否正常；&lt;/li&gt;&#xA;&lt;li&gt;标签、分类、系列是否正常。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-行内公式示例&#34;&gt;2. 行内公式示例&lt;/h2&gt;&#xA;&lt;p&gt;在光学中，数值孔径可以写成 ( NA = n \sin\theta )，其中 ( n ) 是介质折射率，( \theta ) 是最大收光半角。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
