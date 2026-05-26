@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on 秦展齐的笔记</title>
+    <title>Posts on Notes</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on 秦展齐的笔记</description>
+    <description>Recent content in Posts on Notes</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 26 May 2026 09:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Github Notes</title>
-      <link>http://localhost:1313/posts/github-notes/</link>
-      <pubDate>Tue, 26 May 2026 09:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/github-notes/</guid>
-      <description>&lt;p&gt;这里开始写正文。&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
