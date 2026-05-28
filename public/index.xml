@@ -1,29 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>QZQ</title>
-        <link>http://localhost:1313/</link>
+        <link>http://localhost:1042/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 26 May 2026 14:30:00 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 28 May 2026 12:00:00 &#43;0800</lastBuildDate>
+            <atom:link href="http://localhost:1042/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>第一篇科研笔记示例</title>
-    <link>http://localhost:1313/posts/2026/05/first-note/</link>
-    <pubDate>Tue, 26 May 2026 14:30:00 &#43;0800</pubDate>
+    <title>飞秒激光加工包层波导研究计划</title>
+    <link>http://localhost:1042/posts/2026/05/femtosecond-laser-depressed-cladding-waveguide/</link>
+    <pubDate>Thu, 28 May 2026 12:00:00 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/2026/05/first-note/</guid>
-    <description><![CDATA[<h2 id="1-这是一篇示例文章">1. 这是一篇示例文章</h2>
-<p>这是我的第一篇 Hugo 博客文章。这个文件用于测试以下功能：</p>
-<ol>
-<li>中文显示是否正常；</li>
-<li>文章目录是否正常；</li>
-<li>数学公式是否正常；</li>
-<li>图片是否正常；</li>
-<li>代码块是否正常；</li>
-<li>标签、分类、系列是否正常。</li>
-</ol>
-<hr>
-<h2 id="2-行内公式示例">2. 行内公式示例</h2>
-<p>在光学中，数值孔径可以写成 ( NA = n \sin\theta )，其中 ( n ) 是介质折射率，( \theta ) 是最大收光半角。</p>]]></description>
+    <guid>http://localhost:1042/posts/2026/05/femtosecond-laser-depressed-cladding-waveguide/</guid>
+    <description><![CDATA[<h1 id="飞秒激光加工包层波导的研究计划与分析报告">飞秒激光加工包层波导的研究计划与分析报告</h1>
+<h2 id="执行摘要">执行摘要</h2>
+<p>本文所讨论的“包层波导”，特指<strong>飞秒激光直写凹陷包层波导</strong>，亦即文献中常说的 <strong>depressed-cladding waveguide</strong> 或 <strong>Type III waveguide</strong>。它的核心思想不是把导光芯区直接写成高折射率，而是在芯区外围写入一圈或多圈<strong>低折射率改性轨迹</strong>；芯区本身通常保持接近原始材料状态，因此在激光晶体、非线性晶体和各向异性晶体中，往往比 Type I/II 结构更容易同时兼顾导光、增益保持、非线性保持和偏振兼容性。现有研究已在 Nd:YAG、LiNbO₃、Pr:YAG、Tm:YAG、蓝宝石、ZBLAN 玻璃以及 LAS 玻璃陶瓷等平台验证了这一路线。</p>]]></description>
 </item>
 </channel>
 </rss>

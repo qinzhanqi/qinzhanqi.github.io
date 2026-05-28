@@ -2,8 +2,8 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2026-05-26T12:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2026-05-26T12:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2026-05-26T12:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/posts/2026/05/first-note/</loc><lastmod>2026-05-26T12:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc><lastmod>2026-05-26T12:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
+            <loc>http://localhost:1042/categories/</loc><lastmod>2026-05-28T12:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1042/posts/</loc><lastmod>2026-05-28T12:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1042/</loc><lastmod>2026-05-28T12:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1042/posts/2026/05/femtosecond-laser-depressed-cladding-waveguide/</loc><lastmod>2026-05-28T12:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1042/categories/%E9%A3%9E%E7%A7%92%E6%BF%80%E5%85%89%E5%BE%AE%E7%BA%B3%E5%8A%A0%E5%B7%A5/</loc><lastmod>2026-05-28T12:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=2400&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - QZQ</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:2400/posts/1/01/">
+  <meta property="og:site_name" content="QZQ">
+  <meta property="og:title" content="QZQ">
+  <meta property="og:description" content="飞秒激光加工包层波导的研究计划与分析报告 执行摘要 本文所讨论的“包层波导”，特指飞秒激光直写凹陷包层波导，亦即文献中常说的 depressed-cladding waveguide 或 Type III waveguide。它的核心思想不是把导光芯区直接写成高折射率，而是在芯区外围写入一圈或多圈低折射率改性轨迹；芯区本身通常保持接近原始材料状态，因此在激光晶体、非线性晶体和各向异性晶体中，往往比 Type I/II 结构更容易同时兼顾导光、增益保持、非线性保持和偏振兼容性。现有研究已在 Nd:YAG、LiNbO₃、Pr:YAG、Tm:YAG、蓝宝石、ZBLAN 玻璃以及 LAS 玻璃陶瓷等平台验证了这一路线。citeturn37view0turn47view0turn23view0turn39search2turn40view0">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="http://localhost:2400/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:2400/images/avatar.png">
+  <meta name="twitter:title" content="QZQ">
+  <meta name="twitter:description" content="飞秒激光加工包层波导的研究计划与分析报告 执行摘要 本文所讨论的“包层波导”，特指飞秒激光直写凹陷包层波导，亦即文献中常说的 depressed-cladding waveguide 或 Type III waveguide。它的核心思想不是把导光芯区直接写成高折射率，而是在芯区外围写入一圈或多圈低折射率改性轨迹；芯区本身通常保持接近原始材料状态，因此在激光晶体、非线性晶体和各向异性晶体中，往往比 Type I/II 结构更容易同时兼顾导光、增益保持、非线性保持和偏振兼容性。现有研究已在 Nd:YAG、LiNbO₃、Pr:YAG、Tm:YAG、蓝宝石、ZBLAN 玻璃以及 LAS 玻璃陶瓷等平台验证了这一路线。citeturn37view0turn47view0turn23view0turn39search2turn40view0">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:2400/posts/1/01/" /><link rel="next" href="http://localhost:2400/posts/2026/05/first-note/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:2400\/posts\/1\/01\/"
+        },"image": ["http:\/\/localhost:2400\/images\/a.jpg"],"genre": "posts","wordcount":  17557 ,
+        "url": "http:\/\/localhost:2400\/posts\/1\/01\/","publisher": {
+            "@type": "Organization",
+            "name": "QZQ","logo": "http:\/\/localhost:2400\/images\/a.jpg"},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="QZQ">QZQ</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="QZQ">QZQ</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 17557 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 36 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#执行摘要">执行摘要</a></li>
+    <li><a href="#研究目标关键问题与文献检索策略">研究目标、关键问题与文献检索策略</a></li>
+    <li><a href="#包层波导的导光机理与理论模型">包层波导的导光机理与理论模型</a></li>
+    <li><a href="#飞秒激光直写包层波导的形成机理与材料体系">飞秒激光直写包层波导的形成机理与材料体系</a></li>
+    <li><a href="#传输损耗机理评估方法与文献数据">传输损耗机理、评估方法与文献数据</a></li>
+    <li><a href="#表征数值模拟与实验设计">表征、数值模拟与实验设计</a></li>
+    <li><a href="#分阶段时间表风险与预期指标">分阶段时间表、风险与预期指标</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="飞秒激光加工包层波导的研究计划与分析报告">飞秒激光加工包层波导的研究计划与分析报告</h1>
+<h2 id="执行摘要">执行摘要</h2>
+<p>本文所讨论的“包层波导”，特指<strong>飞秒激光直写凹陷包层波导</strong>，亦即文献中常说的 <strong>depressed-cladding waveguide</strong> 或 <strong>Type III waveguide</strong>。它的核心思想不是把导光芯区直接写成高折射率，而是在芯区外围写入一圈或多圈<strong>低折射率改性轨迹</strong>；芯区本身通常保持接近原始材料状态，因此在激光晶体、非线性晶体和各向异性晶体中，往往比 Type I/II 结构更容易同时兼顾导光、增益保持、非线性保持和偏振兼容性。现有研究已在 Nd:YAG、LiNbO₃、Pr:YAG、Tm:YAG、蓝宝石、ZBLAN 玻璃以及 LAS 玻璃陶瓷等平台验证了这一路线。citeturn37view0turn47view0turn23view0turn39search2turn40view0</p>
+<p>从导光机理看，飞秒激光包层波导最关键的物理本质不是“传统无限低折射率包层”的简单复刻，而更接近于<strong>由有限厚度、有限连续性的低折射率环形势垒所形成的准束缚导模</strong>。当写入轨迹足够密、轨迹间距足够小、环形势垒足够厚时，可以用“等效连续低折射率环带”近似，模式求解与 BPM/FEM 重构通常有效；当轨迹稀疏、存在明显间隙或轨迹粗糙不均时，泄漏与散射迅速上升，必须采用离散轨迹的全波或矢量模型。LiNbO₃ 中基于 NA 的折射率重构与 BPM 模拟、ZBLAN 玻璃中单扫环形焦场写入、以及蓝宝石中“少于 10 条轨迹不导光”的实验结果，都支持这一判断。citeturn11view0turn12view0turn40view0turn41view1turn38view0</p>
+<p>从损耗视角看，飞秒激光包层波导的损耗来源可系统分成六大类：<strong>材料吸收与缺陷吸收、轨迹边界散射、包层泄漏、模式失配与端面耦合损耗、弯曲损耗、应力诱导双折射与偏振相关损耗</strong>。在近红外多数透明材料中，若样品本体与端面质量较好，主导项通常不是体吸收，而是<strong>由飞秒激光轨迹粗糙、裂纹、微空穴、非均匀纳米结构和离散间隙带来的散射与泄漏</strong>。这也是为什么耳状结构、双包层/类光子晶格包层、增加轨迹数、减小间距、退火、输入端锥形过渡等策略，通常都能显著降低总损耗或提升耦合效率。citeturn48view1turn14view1turn11view0turn41view1turn36search0turn37view0</p>
+<p>从已报道结果看，若把不同文献中的损耗口径严格区分后再比较，当前可以把目标大致分成三档：<strong>探索级</strong>为传播损耗低于 2 dB/cm；<strong>较有竞争力的论文级</strong>为 0.5–1.0 dB/cm；<strong>高水平标杆级</strong>则进入 0.1–0.5 dB/cm 区间。代表性数据包括：Nd:YAG 单晶优化包层波导可做到 <strong>0.12 dB/cm</strong>；LiNbO₃ 退火后在 1.064 μm 的最小插入损耗可降到 <strong>0.5 dB（10 mm 长样品）</strong>；ZBLAN 单扫环形包层在 1550 nm 可估算到 <strong>1.0 dB/cm</strong>；耳状 Nd:YAG 在 1064 nm 的最佳传播损耗约 <strong>0.99 dB/cm</strong>；蓝宝石可见光包层波导的传播损耗约 <strong>1.9±0.3 dB/cm</strong>，且曲率半径小于 15 mm 时损耗会显著抬升。citeturn14view1turn11view0turn41view1turn48view0turn44view1</p>
+<p>基于这些文献与机理分析，本文给出的研究计划建议采用“两条主线并行”的思路：一条主线做<strong>导光机理与损耗分解的基础问题</strong>，另一条主线做<strong>低损耗结构与工艺优化</strong>。若实验平台尚未确定，我建议优先选择一类高对称激光晶体作为“机理基准平台”（如 Nd:YAG），再选择一类各向异性晶体作为“偏振与应力对照平台”（如 LiNbO₃）；若对可见光集成和弯曲波导更感兴趣，则可把蓝宝石作为第三个平台引入。这样最利于把“几何势垒—应力—散射—耦合”四条链路分开研究，并形成能够直接支撑论文写作的系统数据集。citeturn14view1turn11view0turn37view0turn23view0</p>
+<h2 id="研究目标关键问题与文献检索策略">研究目标、关键问题与文献检索策略</h2>
+<p>本研究的总目标不是仅做出“能导光”的包层波导，而是建立一套可复用的<strong>机理—工艺—损耗—优化</strong>闭环框架：先明确导光本质，再区分损耗来源，再据此反推最优工艺窗口与结构设计。已有综述与原始论文表明，飞秒激光包层波导最有研究价值的地方恰恰在于：它兼具几何灵活性、材料普适性与芯区性质保真，但损耗问题高度依赖材料、轨迹形貌、应力、端面和模式匹配，不能用单一经验参数解释。citeturn28search0turn23view0turn13search17turn46search16</p>
+<table>
+  <thead>
+      <tr>
+          <th>研究问题</th>
+          <th>研究假设</th>
+          <th>对应验证路径</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>包层波导的主导导光机制究竟是低折射率环形势垒，还是应力诱导的局部折射率抬升？</td>
+          <td>在多数成熟的凹陷包层结构中，<strong>低折射率包层势垒</strong>主导模式形成；应力更多影响偏振、模场畸变与附加损耗，而不是主导束缚本身。</td>
+          <td>通过 FEM 复数本征模、应力—光弹耦合仿真、偏振损耗测量、退火前后对比验证。 citeturn14view1turn43view1turn11view0</td>
+      </tr>
+      <tr>
+          <td>轨迹间距、轨迹数量与包层厚度如何决定“导光/不导光”和单模/多模分界？</td>
+          <td>存在可测的<strong>临界几何窗口</strong>：轨迹过疏时泄漏急剧增加，过密时应力开裂概率上升；单模条件与有效芯径、势垒厚度、波长共同决定。</td>
+          <td>进行几何参数扫描，提取 line count–loss、spacing–loss、core size–mode order 相图。 citeturn35view1turn38view0turn38view1</td>
+      </tr>
+      <tr>
+          <td>不同材料中包层轨迹的负折射率改性来源有何不同？</td>
+          <td>玻璃更易出现致密化/缺陷重排与热积累竞争；晶体更常见晶格损伤、塑性变形与应力场；玻璃陶瓷还可能出现相变或纳晶玻璃化引发的负折射率。</td>
+          <td>对比 Raman、PL、吸收谱、退火响应和显微结构。 citeturn22view0turn39search2turn4search14</td>
+      </tr>
+      <tr>
+          <td>当前最主要的传输损耗项是什么？</td>
+          <td>在端面质量较好、材料本体吸收不高时，主导项往往是<strong>边界散射 + 包层泄漏</strong>；小芯径时耦合损耗也会显著抬升。</td>
+          <td>用 cut-back、侧散射成像、模式重构与端面重抛光前后对比进行分解。 citeturn48view1turn41view1turn44view1</td>
+      </tr>
+      <tr>
+          <td>为什么包层波导通常比双线波导更不依赖晶体对称性和偏振方向？</td>
+          <td>因为包层波导的束缚来自周向包层势垒，而不是依赖两条压应力线之间的各向异性折射率谷；但轨迹形貌和应力仍会带来残余偏振差异。</td>
+          <td>比较 Type II 与 depressed cladding 的 TE/TM 模式、偏振损耗与应力图。 citeturn23view0turn39search7turn11view0</td>
+      </tr>
+      <tr>
+          <td>锥形、耳状、双包层、螺旋等变结构是否是降低损耗的有效路线？</td>
+          <td>是。它们分别对应降低模式失配、增强横向势垒、降低弯曲泄漏和改善三维过渡。</td>
+          <td>做标准圆包层与变结构的并行对照。 citeturn35view3turn48view0turn36search0</td>
+      </tr>
+      <tr>
+          <td>怎样建立一套适合论文写作的数据表达方式？</td>
+          <td>仅报告单个“插入损耗”是不够的，必须分清传播损耗、耦合损耗、Fresnel 损耗、弯曲附加损耗与偏振相关损耗。</td>
+          <td>使用统一的数据口径与表格模板。 citeturn11view0turn41view1turn44view1</td>
+      </tr>
+  </tbody>
+</table>
+<p>建议的文献检索策略分三层推进。第一层是<strong>综述定框架</strong>：先检索中文综述与英文权威综述，迅速建立材料体系、波导类型和典型器件版图；第二层是<strong>原始论文抓数据</strong>：围绕 Nd:YAG、LiNbO₃、蓝宝石、ZBLAN、KTP、Pr:YAG、Tm:YAG 等材料，将“结构—参数—损耗—表征方法”一项项整理成表；第三层是<strong>前向/后向引用追踪</strong>：从低损耗、锥形、耳状、螺旋、耦合器和退火优化等关键词出发，追踪关键路线的改进脉络。中文优先关注《激光与光电子学进展》《中国激光》《光学学报》《红外与激光工程》《物理学报》以及 Chinese Laser Press 平台；英文优先关注 Optics Letters、Optics Express、Optical Materials Express、Optical Materials、Laser &amp; Photonics Reviews、Advanced Photonics、Opto-Electronic Advances、Micromachines、Optics and Laser Technology 以及 CLEO、ASSL、SPIE 相关会议。citeturn28search0turn23view0turn13search17turn46search16</p>
+<p>建议直接使用以下关键词组合进行检索，并用布尔逻辑做交叉筛选。中文可用：“飞秒激光 包层波导”“飞秒激光 凹陷包层波导”“飞秒激光直写 激光晶体 波导”“铌酸锂 包层波导 损耗”“Nd:YAG 包层波导 导光”“应力 双折射 波导 损耗”“弯曲损耗 包层波导”。英文可用：“femtosecond laser depressed-cladding waveguide”“fs laser written tubular waveguide”“type III waveguide crystal”“propagation loss scattering loss depressed cladding”“stress birefringence femtosecond written waveguide”“bend loss cladding waveguide”“LiNbO3 Nd:YAG sapphire ZBLAN depressed cladding waveguide”。在实际执行时，应优先把“波导几何”“材料”“损耗口径”“表征方法”四个检索轴分开做，再回到交叉结果里建立信息矩阵。citeturn28search5turn39search4turn46search16</p>
+<h2 id="包层波导的导光机理与理论模型">包层波导的导光机理与理论模型</h2>
+<p>飞秒激光凹陷包层波导的几何本质可以概括为：<strong>未改性的芯区</strong>被一圈或多圈<strong>低折射率写入轨迹</strong>环绕，而外侧仍然是接近原始折射率的本体材料。也就是说，它与通信光纤那种“高折射率芯区 + 无限低折射率包层”的标准阶跃型结构并不完全相同。更准确地说，它通常是一个<strong>有限厚度的低折射率环形势垒</strong>问题；当势垒足够宽、轨迹足够密时，它表现得像“有效低折射率包层”；当轨迹不连续时，它又具有明显的“泄漏模/准束缚模”特征。这一点虽然在许多原始论文中没有被统一命名，但从 LiNbO₃ 的阶跃式折射率重构、ZBLAN 的环形单扫包层和蓝宝石的线数阈值结果来看，这是最符合实验事实的理解。这里的“准束缚模”判断是基于已发表结构拓扑所做的分析性推断。citeturn11view0turn40view0turn38view0turn39search14</p>
+<div class="mermaid" id="id-1">flowchart LR
+A[未改性芯区 n0] --&gt; M[导模或准束缚模]
+B[周向低折射率轨迹 n0-Δncl] --&gt; M
+C[应力场与光弹效应 Δnσ] --&gt; M
+B --&gt; S[散射损耗]
+B --&gt; L[包层泄漏]
+M --&gt; C1[端面耦合与模式失配]
+M --&gt; C2[弯曲与模式转换损耗]</div><p>在时谐场 ( \mathbf{E}(x,y,z,t)=\mathbf{e}(x,y)\exp(i\beta z-i\omega t)) 下，波导模式满足麦克斯韦方程组导出的本征问题<br>
+[
+\nabla \times \nabla \times \mathbf{E}-k_0^2 n^2(x,y)\mathbf{E}=0,\qquad k_0=\frac{2\pi}{\lambda}.
+]
+若采用弱导近似并把模式写成标量场 ( \psi(x,y)\exp(i\beta z))，则可退化为横向 Helmholtz 方程<br>
+[
+\nabla_t^2\psi+\big[k_0^2 n^2(x,y)-\beta^2\big]\psi=0.
+]
+其中，(\beta) 是传播常数，(n(x,y)) 是横向折射率分布，(\nabla_t^2=\partial_x^2+\partial_y^2)。在全矢量模型中边界条件是界面上切向 (\mathbf{E}) 和 (\mathbf{H}) 连续；在标量近似中，相应地可用 (\psi) 与 (\partial\psi/\partial n) 连续来求解。对于开放边界问题，数值上通常采用 Sommerfeld 辐射条件或 PML 吸收边界。citeturn11view0turn37view0</p>
+<p>若把离散写入轨迹近似为一层连续的低折射率环带，则可把圆形包层波导理想化为<br>
+[
+n(r)=
+\begin{cases}
+n_0, &amp; r&lt;a,\[3pt]
+n_0-\Delta n_{\mathrm{cl}}, &amp; a&lt;r&lt;b,\[3pt]
+n_0, &amp; r&gt;b.
+\end{cases}
+]
+这里 (a) 是芯区半径，(b-a) 是等效包层厚度，(\Delta n_{\mathrm{cl}}&gt;0) 表示包层折射率凹陷量。这个模型与常规阶跃型光纤不同，因为外侧区域 (r&gt;b) 的折射率又返回到 (n_0)。因此，低损耗模式更适合被视为<strong>被低折射率环带暂时束缚的准束缚模</strong>；其泄漏大小由环带厚度、凹陷量和轨迹连续性共同控制。citeturn11view0turn40view0turn39search14</p>
+<p>对圆对称近似情形，模式可写成 (\psi_m(r,\phi)=R_m(r)e^{im\phi})。在芯区 (r&lt;a) 有
+[
+R_m(r)=A J_m(ur),\qquad u^2=k_0^2n_0^2-\beta^2;
+]
+在低折射率环带 (a&lt;r&lt;b) 内，若 (\beta&gt;k_0(n_0-\Delta n_{\mathrm{cl}}))，则场在该区域为倏逝型，
+[
+R_m(r)=B I_m(wr)+C K_m(wr),\qquad
+w^2=\beta^2-k_0^2(n_0-\Delta n_{\mathrm{cl}})^2.
+]
+在外部本体 (r&gt;b) 中，由于本体折射率与芯区接近，严格解应满足辐射边界，因此常写成外向 Hankel 函数组合；若做“有效封闭边界”近似，也可用衰减函数近似描述。由此可以直观得到一个重要结论：<strong>包层厚度越大、(\Delta n_{\mathrm{cl}}) 越大、轨迹间隙越小，场穿越环形势垒的隧穿概率越小，泄漏损耗就越低</strong>。因此，包层泄漏常可半定量写成<br>
+[
+\alpha_{\mathrm{conf}}\propto \exp[-2w(b-a)],
+]
+虽然真正的系数还取决于轨迹离散性、非圆对称和材料各向异性。citeturn35view1turn38view0turn41view1</p>
+<p>许多实验并不直接测量完整的二维折射率，而是先测数值孔径，再反推出近似的 (\Delta n)。在弱导近似下可写成<br>
+[
+\mathrm{NA}\approx \sqrt{2n\Delta n},\qquad
+\Delta n\approx \frac{\mathrm{NA}^2}{2n}.
+]
+LiNbO₃ 包层波导工作中就是据此把折射率分布近似成“阶跃式”，并进一步用 FD-BPM 重构模场，得到与实验相当一致的结果；在 4 μm 下，他们估算某些波导的最大折射率对比分别为 (4.1\times10^{-3})、(5.1\times10^{-3}) 等量级。这个结果说明：至少在“轨迹足够密、泄漏不太强”的参数区间内，连续介质近似是可用的。citeturn11view0turn12view0</p>
+<p>导模是否单模，还与波长和有效芯径密切相关。虽然常有人借用传统光纤的 (V) 数
+[
+V \equiv k_0 a\sqrt{n_{\mathrm{core}}^2-n_{\mathrm{clad}}^2}
+]
+做初筛，但对凹陷包层波导而言，(V) 数只能作为粗略判断，因为这里的“包层”是有限厚度、并不无限延伸。更稳妥的做法是：先用它进行参数预选，再用 FEM 求复数本征模，检查基模与高阶模的损耗差。LiNbO₃ 的实验非常典型：直径 50 μm 的波导在 0.633 μm 和 1.064 μm 下是多模，而到 4 μm 时转为双偏振单模；同样的结构尺寸变化对模式阶数的影响，在 Pr:YAG 和 Nd:YAG 的圆包层研究中也很明显。citeturn11view0turn51search2turn35view2</p>
+<p>耦合问题同样不能忽略。若输入光场为 (E_{\mathrm{in}}(x,y))，波导本征模为 (E_{\mathrm{wg}}(x,y))，则端面耦合效率常用重叠积分估算<br>
+[
+\eta_{\mathrm{c}}=
+\frac{\left|\iint E_{\mathrm{in}}E_{\mathrm{wg}}^{*},dA\right|^2}
+{\left(\iint |E_{\mathrm{in}}|^2dA\right)\left(\iint |E_{\mathrm{wg}}|^2dA\right)},
+\qquad
+L_{\mathrm{c}}=-10\log_{10}\eta_{\mathrm{c}}.
+]
+这就是为什么“低传播损耗”并不自动等于“低插入损耗”：在 ZBLAN 单扫波导中，1550 nm 的传播损耗约为 1 dB/cm，但由于模场较大，耦合损耗仍可达约 1.1 dB/facet；而 Nd:YAG 锥形包层波导的提出，本质上就是利用绝热模式变换去缓解这种模式失配。2:1 锥形在可见光下能明显提升输出功率，说明输入端放大—输出端压缩的策略是有效的。citeturn41view1turn35view3</p>
+<p>应力与散射必须视为导光机理的一部分，而不只是“后处理现象”。飞秒激光写入会在轨迹附近形成局部缺陷、体积变化与残余应力。对应力主导的 Type II 双线波导而言，应力场常直接塑造导光区；而在成熟的低损耗凹陷包层结构中，Okhrimchuk 等人的 Nd:YAG 研究表明，<strong>低折射率包层</strong>是模式形成的主导项，而应力主要造成轻微模式畸变。与之相对应，熔融石英中的工作表明，退火可将损耗降低约 30%、将双折射降低 4 倍，说明应力在某些材料中仍会显著拉高附加损耗。把两类结果放在一起看，较合理的统一结论是：<strong>包层势垒决定是否“能导”，应力场决定是否“好导、稳导、偏振无关地导”</strong>。citeturn14view1turn43view1</p>
+<p>若考虑偏振与各向异性，光弹效应可近似写成<br>
+[
+\Delta n_i \approx -\frac{1}{2} n_i^3 \sum_j p_{ij}\sigma_j .
+]
+其中 (p_{ij}) 为光弹系数，(\sigma_j) 为应力分量。LiNbO₃ 的实验显示，不同写入方向与不同入射面会导致 (n_o) 和 (n_e) 极化对应的等效 (\Delta n) 不同，进而造成不同插入损耗；耳状 Nd:YAG 虽然属于立方晶系，但额外的侧向轨迹也会引入轻微的偏振差异。这意味着：在研究计划中，如果把“偏振无关传输”列为目标，就必须把<strong>几何对称性、扫描方向与应力退火</strong>纳入同等重要的工艺维度。citeturn11view0turn48view1turn23view0</p>
+<p>对于超短脉冲或宽带应用，色散与非线性也应进入模型。传播常数满足<br>
+[
+\beta(\omega)=\frac{\omega}{c}n_{\mathrm{eff}}(\omega),
+\qquad
+\beta_2=\frac{d^2\beta}{d\omega^2},
+\qquad
+D_\lambda=-\frac{2\pi c}{\lambda^2}\beta_2.
+]
+非线性系数则可写为<br>
+[
+\gamma=\frac{n_2\omega_0}{cA_{\mathrm{eff}}},
+\qquad
+A_{\mathrm{eff}}=\frac{\left(\iint |E|^2 dA\right)^2}{\iint |E|^4 dA}.
+]
+较小芯区和较强束缚会降低 (A_{\mathrm{eff}})、增强非线性，但同时也会提升边界散射和耦合难度；LiNbO₃、KTP、LiTaO₃ 等非线性晶体中的包层波导还会表现出明显的波导色散、偏振和相位匹配效应，因此在目标是频率转换或飞秒脉冲传输时，不能仅以“传播损耗最小”作为唯一标准。citeturn11view0turn36search19turn7view4</p>
+<h2 id="飞秒激光直写包层波导的形成机理与材料体系">飞秒激光直写包层波导的形成机理与材料体系</h2>
+<p>飞秒激光在透明介质中的改性通常始于<strong>多光子吸收、隧穿电离与雪崩电离</strong>所触发的自由电子等离子体形成，随后能量从电子系统传递给晶格，导致局部致密化、缺陷生成、相变、体积膨胀/收缩、应力冻结，甚至在高能区出现微爆炸和空穴。中文综述与近年的蓝宝石研究都把这类改性大致分为三类：低吸收能量下的平滑折射率变化、中间能量下的双折射/纳米周期结构、高能量下的空穴/微爆炸结构。对飞秒激光包层波导而言，我们通常刻意工作在“能稳定产生负折射率轨迹，但尚未引发严重开裂和大空穴”的窗口。citeturn22view0turn37view0</p>
+<p>在<strong>玻璃与氟化物玻璃</strong>中，飞秒激光既可能写出正折射率 Type I 波导，也可能在特定参数下写出负折射率轨迹，从而形成凹陷包层。ZBLAN 玻璃是这一路线的代表材料：利用空间光调制器构建纵向环形焦场，可以一次扫描同时改写整个环形包层区域，获得 785 nm 和 1550 nm 的单模传输，并把 mode field diameter 做到约 (17.6\times17.3,\mu\text{m}^2) 量级。对光场工程而言，这一结果很重要，因为它说明凹陷包层不一定非要“多条轨迹逐线堆砌”，也可以通过焦场设计实现更高效的单扫写入。citeturn40view0turn41view1turn41view2</p>
+<p>在<strong>玻璃陶瓷</strong>中，机制往往更复杂。LAS 玻璃陶瓷的研究表明，飞秒激光可通过对纳晶区域的空间选择性玻璃化/晶化重排，在改性区形成最高可达 <strong>0.005</strong> 的负折射率变化，并据此实现凹陷包层波导。这一结果说明，玻璃陶瓷包层波导不能只用“缺陷散射”来理解，它还可能带有<strong>相变与纳微结构重排</strong>的材料学内核。近期 SK1310 玻璃的工作则进一步表明，脉冲能量与聚焦深度会显著改变轨迹形貌和随后的模态调控能力，因此形貌控制比单纯“提高脉冲能量”更关键。citeturn39search2turn39search9turn39search3turn39search6</p>
+<p>在<strong>激光晶体与非线性晶体</strong>中，凹陷包层路线尤其有优势，因为许多晶体难以稳定写出低损耗的正折射率芯区。Nd:YAG、Pr:YAG、Tm:YAG、LiNbO₃、KTP 等均已证明：把低折射率轨迹布置在芯区周围，可以在较好保留芯区光谱性质的前提下获得二维约束，部分结构还可实现激光振荡、频率转换、分束器和耦合器。以 Nd:YAG 的耳状包层为例，微荧光图显示芯区的发光性质基本保持，而写入轨迹区荧光显著下降；这正是“把损伤放在包层、把功能留在芯区”的典型体现。citeturn47view0turn48view0turn18search9turn36search19</p>
+<p>在<strong>铌酸锂</strong>中，飞秒激光包层波导还有一个特殊价值：它比传统 Type I/II 写法更容易获得双偏振二维导光。LiNbO₃ 研究显示，50 μm 和 110 μm 直径的圆包层波导都能在 0.633 μm、1.064 μm 与 4 μm 范围导光；其中 50 μm 结构在 4 μm 能达到双偏振单模。更重要的是，退火后最优样品在 1.064 μm 的损耗显著下降，说明该材料中缺陷与应力均可通过后处理缓解。MgO:LiNbO₃ 的研究也显示：双线波导主要支持非常极化，而凹陷包层则可同时支持普通光和非常光偏振。citeturn53view0turn11view0turn39search7</p>
+<p>在<strong>蓝宝石</strong>中，飞秒激光凹陷包层波导的重要性主要体现在可见光与中红外两端。一方面，2018 年工作已在 2850 nm 证明了单模传输与小于 0.37 dB/cm 的传播损耗，并显示热退火后折射率对比在高温下仍可部分保留；另一方面，2024/2025 年的新结果把工作波段推进到 728 nm，并系统考察了曲率半径对损耗的影响。这说明蓝宝石不仅适合做高温、可见—中红外兼容平台，还非常适合做“弯曲损耗临界半径”的研究对象。citeturn45search1turn45search3turn44view1turn28academia13</p>
+<p>把上述材料路线综合起来看，可把形成过程概括成三类。第一类是<strong>缺陷/致密化主导型</strong>，常见于玻璃与部分晶体；第二类是<strong>塑性变形—应力冻结主导型</strong>，在晶体中尤其常见；第三类是<strong>相变/纳晶重排主导型</strong>，典型如玻璃陶瓷。实际样品通常是三者叠加，只是各项权重不同。对研究计划而言，这意味着“工艺优化”必须与“材料诊断”绑定推进，否则即便获得低损耗，也很难回答论文里最关键的机理问题。citeturn22view0turn39search2turn4search14</p>
+<p>下表给出不同材料中飞秒激光凹陷包层波导的<strong>关键加工参数典型窗口</strong>，这些数值不是单一设备的固定设定，而是当前公开文献中常见且可行的起始范围，适合拿来作为首轮参数扫描的边界。</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>建议起始范围</th>
+          <th>典型文献依据与说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>脉冲宽度</td>
+          <td>120–300 fs</td>
+          <td>LiNbO₃、Nd:YAG 多采用 120 fs；蓝宝石可见光写入采用 300 fs。citeturn53view0turn35view0turn38view0</td>
+      </tr>
+      <tr>
+          <td>中心波长</td>
+          <td>524–800 nm</td>
+          <td>Nd:YAG/LiNbO₃ 常见 795–800 nm；蓝宝石可见光写入采用 524 nm。citeturn53view0turn35view0turn38view0</td>
+      </tr>
+      <tr>
+          <td>重复频率</td>
+          <td>1 kHz–100 kHz</td>
+          <td>多数晶体工作从 1 kHz 起步以抑制热积累；蓝宝石可见光写入验证了 100 kHz 也可稳定工作。citeturn53view0turn35view0turn38view0</td>
+      </tr>
+      <tr>
+          <td>单脉冲能量（样品上）</td>
+          <td>55 nJ–5.04 μJ</td>
+          <td>Nd:YAG 锥形结构约 55 nJ；耳状 Nd:YAG 约 0.33 μJ；LiNbO₃ 常见 2.1–5.04 μJ。材料与 NA 不同，数值跨度会很大。citeturn35view1turn49view0turn53view0</td>
+      </tr>
+      <tr>
+          <td>扫描速度</td>
+          <td>0.5 mm/s–15 mm/s</td>
+          <td>1 kHz 晶体写入常用 0.5 mm/s；100 kHz 蓝宝石可到 15 mm/s。citeturn53view0turn49view0turn38view0</td>
+      </tr>
+      <tr>
+          <td>聚焦 NA</td>
+          <td>0.40–0.75</td>
+          <td>LiNbO₃ 文献使用 0.40；Nd:YAG 多用 0.65；蓝宝石可见光采用 0.75。citeturn53view0turn35view0turn38view0</td>
+      </tr>
+      <tr>
+          <td>轨迹间距</td>
+          <td>2–4 μm</td>
+          <td>Nd:YAG 锥形研究给出 (d_{\min}=2,\mu m)、(d_{\max}=4,\mu m)；LiNbO₃ 常用 3 μm。citeturn35view1turn53view0</td>
+      </tr>
+      <tr>
+          <td>写入深度</td>
+          <td>100–150 μm</td>
+          <td>LiNbO₃ 与 Nd:YAG 代表工作多在该范围。citeturn53view0turn49view0</td>
+      </tr>
+      <tr>
+          <td>偏振</td>
+          <td>线偏振为主</td>
+          <td>多数原始工作采用线偏振，并把偏振方向作为轨迹形貌调节参数。citeturn53view0turn37view0</td>
+      </tr>
+      <tr>
+          <td>样品移动方式</td>
+          <td>逐线横向扫描、螺旋扫描、SLM 单扫环形焦场、锥形渐变写入</td>
+          <td>这四类几乎覆盖了当前开发路线。citeturn40view0turn35view1turn36search0</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="传输损耗机理评估方法与文献数据">传输损耗机理、评估方法与文献数据</h2>
+<p>在进入损耗分析之前，必须先强调一个经常被忽略的问题：<strong>不同文献的“损耗”并不是同一个量</strong>。LiNbO₃ 文献报告的是“不含 Fresnel 的插入损耗”；ZBLAN 文献同时分解了传播损耗、耦合损耗和 Fresnel 损耗；蓝宝石可见光文献先测总损耗，再经 cut-back 拆出传播损耗；Nd:YAG 的一些工作则直接给传播损耗。若不先统一口径，横向比较往往会得出错误结论。本文后续将明确区分：传播损耗 (\alpha_{\mathrm{prop}})、耦合损耗 (L_{\mathrm{c}})、每端 Fresnel 损耗 (L_{\mathrm{F}})、总损耗 (L_{\mathrm{tot}}) 与插入损耗 (L_{\mathrm{ins}})。citeturn11view0turn41view1turn44view1turn48view0</p>
+<table>
+  <thead>
+      <tr>
+          <th>损耗类别</th>
+          <th>物理来源</th>
+          <th>定量或半定量评估方式</th>
+          <th>典型量级与文献现象</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>本体吸收与缺陷吸收</td>
+          <td>色心、缺陷态、杂质吸收、写入诱导局部吸收</td>
+          <td>吸收谱；( \alpha_{\mathrm{abs}}=4\pi k/\lambda )；退火前后透过率比较</td>
+          <td>对近红外透明材料，通常不是首要项；但退火能明显改善 LiNbO₃ 与石英波导损耗，说明缺陷吸收与应力相关吸收不可忽略。citeturn11view0turn43view1</td>
+      </tr>
+      <tr>
+          <td>边界散射</td>
+          <td>轨迹粗糙、形貌不均匀、微裂纹、空穴、纳米结构</td>
+          <td>侧散射强度沿程指数拟合；显微截面；Raman/PL 映射；FDTD 散射仿真</td>
+          <td>在耳状 Nd:YAG 中，文中明确指出轨迹粗糙是主要损耗源；小尺寸结构因边界占比更高而损耗更大。citeturn48view1</td>
+      </tr>
+      <tr>
+          <td>包层泄漏</td>
+          <td>包层势垒太薄、轨迹间隙太大、轨迹数太少，导致模场穿透或从间隙泄漏</td>
+          <td>复数本征模求 (\beta_i)；(\alpha_{\mathrm{conf}}\propto e^{-2w(b-a)}) 半定量；line count/spacing 扫描</td>
+          <td>蓝宝石中少于 10 条轨迹不导光；Nd:YAG 中 (d_{\max}\approx4,\mu m) 时再增大分离会导致约束显著变差。citeturn38view0turn35view1</td>
+      </tr>
+      <tr>
+          <td>模式失配与耦合损耗</td>
+          <td>输入模式与本征模场重叠不足；小芯径、椭圆模场和外部光纤/自由光束不匹配</td>
+          <td>重叠积分 (\eta_c)；插入损耗分解；锥形前后比较</td>
+          <td>ZBLAN 在 1550 nm 的传播损耗可约 1 dB/cm，但耦合损耗仍约 1.1 dB/facet；锥形 Nd:YAG 2:1 过渡可改善输出功率。citeturn41view1turn35view3</td>
+      </tr>
+      <tr>
+          <td>Fresnel 损耗</td>
+          <td>端面折射率突变</td>
+          <td>(R=((n-1)/(n+1))^2)，(L_F=-10\log_{10}(1-R))</td>
+          <td>ZBLAN 文献给出约 0.22 dB/facet（785 nm）和 0.2 dB/facet（1550 nm）的估计。citeturn41view1</td>
+      </tr>
+      <tr>
+          <td>弯曲损耗</td>
+          <td>曲率引起有效势垒降低和模场向外侧偏移，导致泄漏增强</td>
+          <td>弯曲坐标 FEM/BPM；S-bend 或螺旋半径扫描</td>
+          <td>螺旋 Nd:YAG 的最小弯曲损耗约 0.55 dB/cm；蓝宝石在曲率半径小于 15 mm 时总损耗迅速增大。citeturn36search0turn44view1</td>
+      </tr>
+      <tr>
+          <td>偏振相关损耗</td>
+          <td>应力场各向异性、轨迹截面不对称、材料本征双折射</td>
+          <td>偏振旋转测量；retardance mapping；Raman/PL 偏振分析；应力—光弹仿真</td>
+          <td>LiNbO₃ 中某些样品对 (n_e) 极化的 (\Delta n) 更小，导致损耗更大；石英退火可让双折射降低 4 倍。citeturn11view0turn43view1</td>
+      </tr>
+      <tr>
+          <td>光学损伤与热漂移</td>
+          <td>高功率泵浦或局部吸收造成永久损伤、模式扭曲或裂纹扩展</td>
+          <td>高功率耐受测试；显微随功率演化；热循环与退火追踪</td>
+          <td>LiNbO₃ 260℃/1 h 退火可明显改善损耗；蓝宝石中红外包层波导在高温下仍保持部分折射率对比。citeturn11view0turn45search1</td>
+      </tr>
+      <tr>
+          <td>色散引起的模式转换或等效耦合损失</td>
+          <td>不同波长下模式阶数变化、群速度失配、宽带脉冲谱内模态再分配</td>
+          <td>光谱透过率；宽带近场；(\beta_2)、(D_\lambda) 数值计算</td>
+          <td>LiNbO₃ 的 50 μm 波导在 4 μm 为单模，而在 0.633/1.064 μm 为多模，同一结构的波长依赖极强。citeturn11view0</td>
+      </tr>
+  </tbody>
+</table>
+<p>下面的文献对比表把“结构、参数、损耗口径、代表结果”并列放在一起，便于直接用于实验设计选型。表中最重要的信息不是谁的数值最低，而是：<strong>什么几何、什么参数、在什么波长、以什么口径测得了什么损耗</strong>。</p>
+<table>
+  <thead>
+      <tr>
+          <th>材料与文献</th>
+          <th>结构</th>
+          <th>关键加工参数</th>
+          <th>损耗口径</th>
+          <th>代表结果</th>
+          <th>对本研究的直接启示</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Nd:YAG 单晶，Okhrimchuk 等，2012</td>
+          <td>低损耗圆包层</td>
+          <td>摘要公开信息显示为飞秒激光、椭圆光斑、并重点分析应力；摘要未公开全部工艺细节</td>
+          <td>传播损耗</td>
+          <td><strong>0.12 dB/cm</strong>，并指出包层是模式形成主导、机械应力贡献较小</td>
+          <td>这是机理基准文献；值得作为“低损耗上限”对标。 citeturn14view1turn42search10</td>
+      </tr>
+      <tr>
+          <td>LiNbO₃，He 等，2013</td>
+          <td>圆包层，直径 50/110 μm</td>
+          <td>800 nm，120 fs，1 kHz，NA 0.40，0.5 mm/s，轨迹间距 3 μm，能量 2.1/5.04 μJ，深度约 150 μm</td>
+          <td><strong>插入损耗</strong>，不含 Fresnel</td>
+          <td>10 mm 长样品在 1.064 μm 退火后最低 <strong>0.5 dB</strong>；50 μm 波导在 4 μm 为单模；(\Delta n) 约 (10^{-3}) 量级</td>
+          <td>适合研究“双偏振导光、波长依赖单模条件、退火优化”。 citeturn53view0turn11view0</td>
+      </tr>
+      <tr>
+          <td>Nd:YAG，Romero 等，2020</td>
+          <td>锥形圆包层</td>
+          <td>795 nm，120 fs，1 kHz，55 nJ，NA 0.65，500 μm/s，深度 100 μm，(d_{\min}=2,\mu m)、(d_{\max}=4,\mu m)</td>
+          <td>传播损耗 + 模式整形效果</td>
+          <td>(R=6,\mu m) 直波导在 633 nm 约 <strong>1.7 dB/cm</strong>；(R=9,\mu m) 在 850 nm 低于 <strong>3 dB/cm</strong>；2:1 锥形改善输出</td>
+          <td>适合做“耦合损耗—传播损耗权衡”和锥形绝热过渡研究。 citeturn35view0turn35view1turn35view2</td>
+      </tr>
+      <tr>
+          <td>Nd:YAG，Sun 等，2021</td>
+          <td>耳状包层</td>
+          <td>795 nm，120 fs，1 kHz，0.33 μJ，NA 0.65，0.5 mm/s，轨迹间距 3 μm，半径 10–25 μm</td>
+          <td>传播损耗</td>
+          <td>标准包层最低约 <strong>1.45 dB/cm</strong>；耳状结构最低约 <strong>0.99 dB/cm</strong>（TM）</td>
+          <td>证明“增加侧向势垒”可以不显著增大体积而有效降损。 citeturn49view0turn48view0turn48view1</td>
+      </tr>
+      <tr>
+          <td>ZBLAN，Q. Zhang 等，2017</td>
+          <td>SLM 单扫环形包层</td>
+          <td>三维焦场工程；单扫横向写入；开放页面给出连续环案例脉冲能量 5 μJ</td>
+          <td>传播损耗、耦合损耗、Fresnel 分解</td>
+          <td>分段环形焦场写入：785 nm <strong>1.3 dB/cm</strong>，1550 nm <strong>1.0 dB/cm</strong>；1550 nm 耦合损耗约 <strong>1.1 dB/facet</strong>；MFD 约 (17.6\times17.3,\mu m)</td>
+          <td>适合研究“光场工程降低加工时长”和“耦合损耗单独分解”。 citeturn40view0turn41view1turn41view2</td>
+      </tr>
+      <tr>
+          <td>蓝宝石，Winkler 等，2024/2025</td>
+          <td>可见光凹陷包层与弯曲波导</td>
+          <td>524 nm，300 fs，100 kHz，65/78 nJ，NA 0.75，15 mm/s，线偏振</td>
+          <td>总损耗 + cut-back 传播损耗</td>
+          <td>728 nm 单模，传播损耗约 <strong>1.9±0.3 dB/cm</strong>；曲率半径 <strong>&lt;15 mm</strong> 时总损耗急剧上升</td>
+          <td>适合研究“可见光平台”和“弯曲损耗临界半径”。 citeturn38view0turn44view1turn28academia13</td>
+      </tr>
+      <tr>
+          <td>蓝宝石，Bérubé 等，2018/2019</td>
+          <td>中红外凹陷包层</td>
+          <td>515 nm 飞秒写入，轨迹平滑负折射率改性</td>
+          <td>传播损耗</td>
+          <td>2850 nm 单模，33 mm 长波导传播损耗 <strong>&lt;0.37 dB/cm</strong>，高温退火后仍保留约 50% 折射率对比</td>
+          <td>适合研究“中红外低损耗”和“高温稳定性”。 citeturn45search1turn45search4turn45search5</td>
+      </tr>
+      <tr>
+          <td>ZnS，Sorokin 等，2022 预印本</td>
+          <td>埋入式凹陷包层波导</td>
+          <td>摘要公开信息未给出完整工艺细节</td>
+          <td>传播损耗</td>
+          <td>1030 nm 传播损耗 <strong>0.62 dB/cm</strong>；并实现 2272 nm Cr:ZnS 波导激光</td>
+          <td>说明中红外 II–VI 晶体也是潜在拓展方向。 citeturn28academia12</td>
+      </tr>
+  </tbody>
+</table>
+<p>综合这些结果，可以提炼出几条非常明确的设计规律。第一，<strong>更大的芯径通常更低损耗，但更容易多模</strong>；第二，<strong>增强包层的连续性和有效厚度几乎总是有利于降损</strong>；第三，<strong>传播损耗最小的结构不一定具有最小插入损耗</strong>，因为小芯径和形状畸变会严重放大模式失配；第四，<strong>弯曲问题不能在直波导优化完成后再补做</strong>，因为它常常改变最佳几何窗口。若把这些规律转化成实验设计语言，就是：要么做“机理型样品矩阵”，要么做“应用型目标器件”，但不要在同一批样品里同时追求所有目标，否则数据会难以解释。citeturn35view2turn48view1turn41view1turn44view1</p>
+<h2 id="表征数值模拟与实验设计">表征、数值模拟与实验设计</h2>
+<p>对于导光与损耗研究，最有效的思路不是单项表征堆叠，而是建立一个能互相验证的<strong>表征闭环</strong>：端面模场告诉你“导得怎样”，侧散射告诉你“哪里在漏”，cut-back 告诉你“沿程损耗是多少”，Raman/PL 告诉你“微观改性是什么”，应力测量告诉你“偏振为什么不同”，最后 FEM/BPM/FDTD 再把这些量统一到一个可解释的参数模型中。公开文献里，LiNbO₃ 的折射率重构 + BPM、Nd:YAG 的侧散射法、蓝宝石的 cut-back、Pr:YAG 的模式仿真解释，正好构成了一条成熟的方法链。citeturn11view0turn35view1turn44view1turn51search2</p>
+<table>
+  <thead>
+      <tr>
+          <th>表征方法</th>
+          <th>能回答的问题</th>
+          <th>优点</th>
+          <th>局限</th>
+          <th>适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>端面插入损耗测量</td>
+          <td>样品总体能不能用</td>
+          <td>快、简单、最适合批量筛选</td>
+          <td>混合了传播、耦合、Fresnel，不能分项</td>
+          <td>首轮参数扫描；不同结构快速排序。 citeturn11view0turn41view1</td>
+      </tr>
+      <tr>
+          <td>Cut-back 法</td>
+          <td>传播损耗到底是多少</td>
+          <td>结果最直接，能把耦合常数项分离出去</td>
+          <td>需要多次裁切、抛光，对样品消耗大</td>
+          <td>终版损耗定标；论文核心结果。 citeturn44view1</td>
+      </tr>
+      <tr>
+          <td>侧散射成像</td>
+          <td>哪些区段在散射、沿程衰减是否均匀</td>
+          <td>可定位局部缺陷、裂纹和弯曲热点</td>
+          <td>需要光路和图像定标；对样品表面可视性有要求</td>
+          <td>直波导沿程损耗、局部缺陷定位、锥形或弯曲段评估。 citeturn35view1turn41view2</td>
+      </tr>
+      <tr>
+          <td>近场/远场模场测量</td>
+          <td>单模/多模、模场尺寸、偏振依赖</td>
+          <td>与器件应用最相关，可直接用于耦合设计</td>
+          <td>只能看输出端，无法直接分辨损耗来源</td>
+          <td>结构筛选、重叠积分计算、模式演化分析。 citeturn11view0turn35view2turn38view0</td>
+      </tr>
+      <tr>
+          <td>光谱透过/吸收测量</td>
+          <td>缺陷吸收、工作带宽、退火前后变化</td>
+          <td>能排查“材料吸收”是否是瓶颈</td>
+          <td>难以直接分离散射与泄漏</td>
+          <td>退火研究、宽带/中红外研究。 citeturn11view0turn45search1</td>
+      </tr>
+      <tr>
+          <td>共聚焦微拉曼</td>
+          <td>晶格损伤、应力、相变、局部缺陷</td>
+          <td>对机理非常关键，能建立加工—结构—损耗关联</td>
+          <td>实验耗时，数据解释需结合材料学</td>
+          <td>晶体与玻璃陶瓷机理研究。 citeturn23view0turn36search19</td>
+      </tr>
+      <tr>
+          <td>微荧光/PL 映射</td>
+          <td>芯区功能是否被保留、增益介质是否受损</td>
+          <td>对激光晶体极重要，可判断“包层写法”的价值</td>
+          <td>仅适用于发光材料</td>
+          <td>激光晶体、稀土掺杂材料。 citeturn47view0turn52view0</td>
+      </tr>
+      <tr>
+          <td>截面显微与断面抛光</td>
+          <td>轨迹尺寸、间距、圆度、裂纹</td>
+          <td>最直观，便于与仿真几何对接</td>
+          <td>需要制样</td>
+          <td>结构确认与工艺窗口建立。 citeturn53view0turn49view0</td>
+      </tr>
+      <tr>
+          <td>应力双折射/retardance 测量</td>
+          <td>偏振相关损耗和应力分布</td>
+          <td>可直接连接到光弹模型</td>
+          <td>对设备要求较高</td>
+          <td>偏振无关波导优化。 citeturn43view1turn11view0</td>
+      </tr>
+  </tbody>
+</table>
+<p>数值模拟方面，建议不要从一开始就用最重的 FDTD，而应按问题复杂度逐层上升。<strong>FEM 本征模求解</strong>最适合求 (n_{\mathrm{eff}})、群速度、偏振特性和复数传播常数；<strong>BPM/FD-BPM</strong>最适合锥形、分支、耦合器等沿程演化问题；<strong>FDTD</strong>最适合做离散轨迹、间隙泄漏、粗糙边界散射和超短脉冲传播；<strong>应力—光弹耦合建模</strong>适合回答“为什么同样的几何在不同偏振下损耗不同”；而最简单也最常用的<strong>重叠积分模型</strong>则非常适合指导输入端耦合和锥形端设计。LiNbO₃ 的工作已经证明，先利用 NA 重构折射率，再用 BPM 拟合模场，是一个成本较低而有效的起点。citeturn11view0turn35view3turn44view1</p>
+<table>
+  <thead>
+      <tr>
+          <th>数值方法</th>
+          <th>推荐输出量</th>
+          <th>优点</th>
+          <th>局限</th>
+          <th>建议用途</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>FEM 全矢量本征模</td>
+          <td>(n_{\mathrm{eff}})、(\beta_i)、偏振模、弯曲损耗、复数模</td>
+          <td>准确、适合各向异性晶体和泄漏模</td>
+          <td>网格与计算成本较高</td>
+          <td>作为核心求解器，用于最终设计和论文数据。</td>
+      </tr>
+      <tr>
+          <td>BPM / FD-BPM</td>
+          <td>模式沿程演化、锥形/分支/耦合器传输</td>
+          <td>快，适合长器件与结构优化</td>
+          <td>对强散射和离散轨迹精度不足</td>
+          <td>锥形端、Y 分支、器件设计。 citeturn11view0turn35view3</td>
+      </tr>
+      <tr>
+          <td>FDTD</td>
+          <td>散射、宽带响应、超短脉冲、离散轨迹间隙影响</td>
+          <td>能直接处理复杂边界和瞬态</td>
+          <td>计算量最大</td>
+          <td>用来研究粗糙边界、离散包层与泄漏机理。</td>
+      </tr>
+      <tr>
+          <td>重叠积分/耦合模理论</td>
+          <td>耦合效率、分光比、模式转换</td>
+          <td>简单、速度极快、便于做参数扫描</td>
+          <td>不能给真实散射损耗</td>
+          <td>输入耦合设计与初筛。</td>
+      </tr>
+      <tr>
+          <td>应力—光弹耦合模拟</td>
+          <td>(\Delta n_\sigma)、双折射、偏振相关损耗</td>
+          <td>直接对应偏振问题</td>
+          <td>需要材料弹性与光弹常数</td>
+          <td>各向异性晶体、偏振无关结构设计。</td>
+      </tr>
+      <tr>
+          <td>反演式模型</td>
+          <td>从近场与 NA 反求 (\Delta n) 分布</td>
+          <td>与实验衔接好</td>
+          <td>依赖先验假设</td>
+          <td>作为实验数据同化工具。 citeturn11view0</td>
+      </tr>
+  </tbody>
+</table>
+<p>如果把这些方法落到一个可执行的实验方案，建议采用如下顺序。先以<strong>端面模场 + 插入损耗</strong>做粗筛，从中选出 10–20 个结构；对入选结构做<strong>截面显微</strong>与<strong>侧散射成像</strong>，快速判断是“耦合不好”还是“沿程散射太大”；随后对其中 3–5 个候选结构做<strong>cut-back</strong>，提取真实传播损耗；最后对最优和最差两端样品各做一套 <strong>Raman/PL/应力</strong>对照，再把这些结果反馈给 FEM 与应力模型。这种“最好样品 vs 最差样品”的对照，往往比只研究最优样品更能支撑论文中的机理分析。citeturn35view1turn44view1turn47view0</p>
+<p>对于参数扫描，我建议至少沿以下五条轴展开：一是<strong>脉冲能量</strong>，围绕改性阈值到轻微开裂阈值之间做细分；二是<strong>轨迹间距/轨迹数</strong>，研究连续性与泄漏；三是<strong>芯径/包层半径</strong>，研究单模—低损耗权衡；四是<strong>扫描速度与重复率</strong>，研究热积累和应力冻结；五是<strong>变结构</strong>，包括耳状、双包层、锥形和螺旋。若实验资源有限，优先顺序应是：标准圆包层 → 轨迹间距/线数扫描 → 芯径扫描 → 耳状或锥形结构。这条路线最容易先得到可发表结果，再逐步扩展到器件功能。citeturn35view1turn48view1turn36search0turn38view0</p>
+<h2 id="分阶段时间表风险与预期指标">分阶段时间表、风险与预期指标</h2>
+<p>在“设备与预算无特定约束”的前提下，较合理的研究周期是 <strong>7–8 个月</strong>。如果是博士阶段系统课题，可以把这套计划扩展成 12–18 个月，但首篇论文最适合把目标收敛到“单一材料平台 + 导光机理 + 损耗分解 + 一种低损耗优化结构”。若首批样品平台尚未定，我建议先做 <strong>Nd:YAG（机理基准）+ LiNbO₃（偏振与应力对照）</strong>；若更偏向可见光或量子集成应用，则加上蓝宝石。citeturn14view1turn11view0turn37view0</p>
+<div class="mermaid" id="id-2">gantt
+    title 建议研究时间线
+    dateFormat  YYYY-MM-DD
+    section 文献与理论
+    文献检索与问题凝练 :a1, 2026-06-01, 21d
+    理论模型与仿真框架 :a2, after a1, 28d
+    section 样品与工艺
+    标准圆包层基线制备 :b1, after a2, 28d
+    工艺窗口扫描 :b2, after b1, 21d
+    变结构优化 :b3, after b2, 42d
+    section 表征与闭环
+    模式与损耗分解表征 :c1, after b3, 28d
+    模拟-实验闭环优化 :c2, after c1, 28d
+    section 总结
+    论文写作与图表整理 :d1, after c2, 21d</div><table>
+  <thead>
+      <tr>
+          <th>阶段</th>
+          <th style="text-align: right">建议时长</th>
+          <th>主要任务</th>
+          <th>里程碑</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>文献调研与问题收敛</td>
+          <td style="text-align: right">3 周</td>
+          <td>建立“材料—结构—参数—损耗—表征”数据库；完成 50–80 篇核心文献精读</td>
+          <td>形成文献综述初稿与表格模板</td>
+      </tr>
+      <tr>
+          <td>理论建模</td>
+          <td style="text-align: right">4 周</td>
+          <td>完成等效包层模型、重叠积分模型、FEM/BPM 基础例程；定义损耗口径</td>
+          <td>得到可用于拟合实验的统一模型</td>
+      </tr>
+      <tr>
+          <td>基线样品制备</td>
+          <td style="text-align: right">4 周</td>
+          <td>先做标准圆包层；建立能稳定导光的阈值窗口</td>
+          <td>获得第一批可重复导光样品</td>
+      </tr>
+      <tr>
+          <td>参数扫描实验</td>
+          <td style="text-align: right">3 周</td>
+          <td>扫描脉冲能量、轨迹间距、轨迹数、芯径</td>
+          <td>得到“导光/不导光”和单模/多模边界</td>
+      </tr>
+      <tr>
+          <td>结构优化</td>
+          <td style="text-align: right">6 周</td>
+          <td>引入耳状、锥形或双包层；必要时加入螺旋结构</td>
+          <td>传播损耗进入目标区间；耦合效率显著提高</td>
+      </tr>
+      <tr>
+          <td>表征与损耗分解</td>
+          <td style="text-align: right">4 周</td>
+          <td>近场、远场、插入损耗、cut-back、侧散射、Raman/PL、应力测量</td>
+          <td>明确主导损耗项和微观来源</td>
+      </tr>
+      <tr>
+          <td>仿真—实验闭环</td>
+          <td style="text-align: right">4 周</td>
+          <td>拟合 (\Delta n)、(\beta_i)、模式尺寸和偏振损耗；反推最优几何</td>
+          <td>模型与实验一致性建立</td>
+      </tr>
+      <tr>
+          <td>总结与写作</td>
+          <td style="text-align: right">3 周</td>
+          <td>形成论文图组、结果讨论和方法附件</td>
+          <td>完成投稿版手稿</td>
+      </tr>
+  </tbody>
+</table>
+<p>研究执行中最常见的风险，不是“做不出波导”，而是<strong>做得出来、但损耗拆不清、机理说不清</strong>。因此风险预案必须和实验设计同时制定。</p>
+<table>
+  <thead>
+      <tr>
+          <th>风险</th>
+          <th>典型表现</th>
+          <th>原因判断</th>
+          <th>应对策略</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>不导光或导光极弱</td>
+          <td>端面仅见散射亮斑，无稳定模场</td>
+          <td>轨迹过疏、线数不足、能量低于稳定负改性阈值</td>
+          <td>增加轨迹数；减小间距；提高脉冲能量到损伤阈值上方；优先做标准圆包层。 citeturn38view0turn35view1</td>
+      </tr>
+      <tr>
+          <td>开裂或严重缺陷</td>
+          <td>截面出现裂纹、轨迹发黑、散射极强</td>
+          <td>脉冲能量过高、局部热积累或应力过强</td>
+          <td>降低单脉冲能量；提高扫描速度；降低重复率；优化偏振与入射方向。 citeturn49view0turn22view0</td>
+      </tr>
+      <tr>
+          <td>传播损耗高于预期</td>
+          <td>cut-back 明显偏大；侧散射分布不均</td>
+          <td>边界粗糙、离散间隙大、局部裂纹</td>
+          <td>增加包层厚度或耳状/双包层；采用退火；做更对称轨迹布置。 citeturn48view1turn11view0</td>
+      </tr>
+      <tr>
+          <td>插入损耗高但传播损耗一般</td>
+          <td>直波导 cut-back 尚可，整器件耦合差</td>
+          <td>模式失配、端面质量差</td>
+          <td>采用锥形输入端、改善端面抛光、优化物镜 NA 与准直条件。 citeturn35view3turn41view1</td>
+      </tr>
+      <tr>
+          <td>偏振相关损耗明显</td>
+          <td>TE/TM 差别大，近场形貌不同</td>
+          <td>应力双折射、晶体各向异性、轨迹布置不对称</td>
+          <td>做偏振扫描、应力测量和光弹仿真；采用高对称包层或退火。 citeturn11view0turn43view1turn48view1</td>
+      </tr>
+      <tr>
+          <td>弯曲器件性能差</td>
+          <td>S-bend、Y 分支损耗突增</td>
+          <td>曲率半径过小、模式外移</td>
+          <td>先做直波导最优，再单独扫描弯曲半径；优先考虑螺旋/大半径设计。 citeturn36search0turn44view1</td>
+      </tr>
+      <tr>
+          <td>功能晶体芯区性质被破坏</td>
+          <td>荧光降低、增益下降、非线性效率低</td>
+          <td>模场侵入损伤区过深或写入区过近</td>
+          <td>增大芯区与轨迹的有效间隔；减小轨迹损伤强度；优先保留未改性芯区。 citeturn47view0turn52view0</td>
+      </tr>
+  </tbody>
+</table>
+<p>最后给出本课题最适合采用的<strong>量化目标体系</strong>。由于用户未指定目标波长与最终应用，我建议把目标分层，而不是只给出一个刚性数字。</p>
+<table>
+  <thead>
+      <tr>
+          <th>指标</th>
+          <th style="text-align: right">探索阶段建议</th>
+          <th style="text-align: right">论文级建议</th>
+          <th style="text-align: right">标杆级建议</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>传播损耗</td>
+          <td style="text-align: right">&lt; 2 dB/cm</td>
+          <td style="text-align: right">0.5–1.0 dB/cm</td>
+          <td style="text-align: right">0.1–0.5 dB/cm</td>
+          <td>依据 Nd:YAG、LiNbO₃、ZBLAN、蓝宝石等代表结果设定。citeturn14view1turn11view0turn41view1turn44view1</td>
+      </tr>
+      <tr>
+          <td>10 mm 样品插入损耗</td>
+          <td style="text-align: right">&lt; 3 dB</td>
+          <td style="text-align: right">1–2 dB</td>
+          <td style="text-align: right">&lt; 1 dB</td>
+          <td>需明确是否包含 Fresnel。citeturn11view0turn41view1</td>
+      </tr>
+      <tr>
+          <td>模式形态</td>
+          <td style="text-align: right">可重复导光</td>
+          <td style="text-align: right">准高斯、弱高阶模</td>
+          <td style="text-align: right">严格单模</td>
+          <td>具体阈值依目标波长与材料而定。citeturn11view0turn35view2turn38view0</td>
+      </tr>
+      <tr>
+          <td>模场尺寸</td>
+          <td style="text-align: right">与外部光源可匹配即可</td>
+          <td style="text-align: right">10–25 μm 量级优先</td>
+          <td style="text-align: right">与目标光纤或泵浦模式高匹配</td>
+          <td>ZBLAN 的 17.6×17.3 μm 是很好的耦合参考。citeturn41view2</td>
+      </tr>
+      <tr>
+          <td>耦合效率</td>
+          <td style="text-align: right">&gt; 50%</td>
+          <td style="text-align: right">&gt; 70%</td>
+          <td style="text-align: right">&gt; 80%</td>
+          <td>应通过端面优化或锥形结构实现。citeturn35view3turn41view1</td>
+      </tr>
+      <tr>
+          <td>偏振相关损耗</td>
+          <td style="text-align: right">&lt; 1 dB</td>
+          <td style="text-align: right">&lt; 0.5 dB</td>
+          <td style="text-align: right">近似偏振无关</td>
+          <td>对 LiNbO₃、KTP 等材料尤为关键。citeturn11view0turn39search7</td>
+      </tr>
+      <tr>
+          <td>弯曲半径</td>
+          <td style="text-align: right">先能工作</td>
+          <td style="text-align: right">明确临界半径</td>
+          <td style="text-align: right">在目标半径下附加损耗可接受</td>
+          <td>蓝宝石可见光平台建议先以 &gt;15 mm 为保守起点。citeturn44view1</td>
+      </tr>
+  </tbody>
+</table>
+<p>若把本报告压缩成一句最可执行的建议，那就是：<strong>先把包层波导看成“有限厚度低折射率势垒 + 应力修正 + 边界散射”的综合系统，而不是单纯的折射率阶跃；然后以“传播损耗、耦合损耗、偏振损耗、弯曲损耗”四条线同时建模和测量。</strong> 一旦这条方法论建立起来，无论是在 Nd:YAG、LiNbO₃、蓝宝石，还是在后续扩展到玻璃陶瓷、ZnS、KTP 等材料上，研究都会更快进入可发表、可复现、可解释的阶段。citeturn14view1turn11view0turn39search2turn37view0</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/2026/05/first-note/" class="next" rel="next" title="第一篇科研笔记示例">第一篇科研笔记示例<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
+</html>
